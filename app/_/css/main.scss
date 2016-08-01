@@ -1,0 +1,238 @@
+@import 'init';
+
+/******************************************************
+* MAIN.SCSS
+*	Main site element styles go in this file.
+*	Iclude styles for primary elements that are
+*	used site wide (typography: a, h1, p, body, etc).
+\******************************************************/
+
+
+body {
+	@include BodyCopy;
+}
+
+/* Remove blue outline on anything in focus */
+a:focus, button:focus, input:focus {
+  outline: 0;
+}
+
+/* Alignment */
+.align-center {
+	text-align: $AlignCenter;
+}
+
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+	color: $OffWhite;
+	font-family: $DomaineRegStack;
+}
+
+.gold {
+	color: $YellowColor;
+}
+
+.special {
+	color: $YellowColor;
+}
+
+p {
+	color: $OffWhite;
+	text-transform: uppercase;
+	font-size: $Small;
+	font-family: $SweetSansStack;
+	letter-spacing: 0.1em;
+	line-height: 18px;
+
+	a {
+		color: $GreenLink;
+		text-decoration: underline;
+	}
+	a:hover {
+		color: $OffWhite;
+	}
+}
+
+p.transparent {
+	text-align: $AlignCenter;
+	text-align: center;
+	bottom: 0;
+	height: 5%;
+	position: absolute;
+	width: 100%;
+	background: rgba(0, 39, 32, 0.5);
+}
+
+/* Images */
+.img-center {
+	display: block;
+  margin: 0 auto;
+}
+
+.monogram {
+	width: 100px;
+	text-align: center;
+}
+
+.monogram2 {
+	width: 200px;
+}
+
+.gold-bg {
+		background-color: $YellowColor;
+		padding: 20px 30px;
+		p {
+			color: $GreenBg;
+			line-height: 18px;
+		}
+}
+
+/* Forms */
+form {
+	input.large {
+		width: 100%;
+		padding: 10px 12px;
+    background: $InputGreen;
+    border: none;
+    border-bottom: 2px solid $YellowColor;
+		text-align: $AlignCenter;
+		color: $OffWhite;
+		font-family: $DomaineRegStack;
+		font-size: 34px;
+	}
+	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  	color: $GreenColor;
+	}
+	input::-moz-placeholder { /* Firefox 19+ */
+  	color: $GreenColor;
+	}
+	input:-ms-input-placeholder { /* IE 10+ */
+  	color: $GreenColor;
+	}
+	input:-moz-placeholder { /* Firefox 18- */
+  	color: $GreenColor;
+	}
+
+	.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+		width: 100%!important;
+	}
+
+	/* Dropdown Selects */
+	.btn-select {
+		width: 100%;
+		padding: 10px 12px;
+		margin-top: 0px!important;
+		background: $InputGreen;
+		border: none;
+		border-bottom: 2px solid $YellowColor;
+		color: $YellowColor;
+		font-family: $DomaineRegStack;
+		font-size: 18px;
+	}
+
+	.btn-select:hover {
+		color: $YellowColor;
+	}
+	.btn-select:focus {
+		color: $YellowColor;
+		outline: none !important;
+	}
+
+	.dropdown-menu {
+		background: $InputGreen;
+		border-radius: 0px!important;
+		color: $OffWhite;
+		width: 94%!important;
+		font-family: $DomaineRegStack!important;
+	}
+
+	.dropdown-menu > li > a {
+		color: $OffWhite!important;
+	}
+
+	.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+		background-image: none!important;
+		background-color: $GreenColor;
+		color: $OffWhite;
+	}
+
+}
+
+/* UI Autocomplete force reset */
+.ui-autocomplete {
+	position: relative!important;
+  cursor: default;
+  width: 300px!important;
+  left: 40%!important;
+  top: -145px!important;
+	background: $InputGreen!important;
+	border: none!important;
+	border-radius: 0px!important;
+
+	a {
+		color: $OffWhite!important;
+	}
+
+	.ui-state-hover {
+		background: none!important;
+		border: none!important;
+	}
+}
+
+.ui-menu .ui-menu-item {
+	color: $OffWhite!important;
+	padding: 5px 1em 5px 0.7em!important;
+}
+
+/* Buttons */
+.btn {
+	padding: 8px 12px;
+	margin-top: 25px;
+	border-radius: 0;
+	font-family: $DomaineRegStack;
+	font-size: $Large;
+}
+
+.green {
+	background: $GreenColor;
+	color: $YellowColor;
+}
+
+.green:hover {
+	background: $GreenLink;
+	color: $YellowColor;
+}
+
+.yellow {
+	background: $YellowColor;
+	color: $GreenBg;
+	font-family: $SweetSansStack!important;
+	font-size: $Small;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.yellow:hover {
+	background: #f0ad4e;
+}
+/* Google Map */
+#google-map {
+	overflow: hidden;
+	transform: translateZ(0px);
+	background-color: rgb(229, 227, 223);
+	height: 36%;
+	position: absolute;
+	z-index: 20000;
+	width: 100%;
+	bottom: 0;
+}
+
+.margined {
+	margin-bottom: 12%!important;
+}
+
+#guests {
+	.row {
+		margin-bottom: 15px;
+	}
+}

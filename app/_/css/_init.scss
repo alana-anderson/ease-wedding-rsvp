@@ -1,0 +1,35 @@
+/* Color Variables */
+$GreenBg: #002720;
+$CopyColor: #222222;
+$HighlightColor: #C1CB38;
+$LinkColor: #0000FF;
+$YellowColor: #e79f4a;
+$OffWhite: #e0e7e6;
+$GreenColor: #0f453b;
+$GreenLink: #2a7769;
+$InputGreen: #001c17;
+
+/* Alignment Variables */
+$AlignCenter: center;
+$AlignRight: right;
+$AlignLeft: left;
+
+/* Size Variables */
+$Small: 11px;
+$Medium: 14px;
+$Large: 18px;
+
+/* Font Variables */
+//@import "../fonts/DomaineDisp-Regular.otf";
+//@import "../fonts/DomaineDisp-Semibold.otf";
+//@import "../fonts/SweetSans-Regular.otf";
+$DomaineRegStack: 'DomaineDispReg',Garamond,serif;
+$DomaineBoldStack: 'DomaineDispBold',Garamond,serif;
+$SweetSansStack: 'SweetSans',Helvetica,Arial,sans-serif;
+
+@mixin BodyCopy {
+	background: $GreenBg;
+	color: $OffWhite;
+	font-weight: normal;
+	height: 100vh;
+}
